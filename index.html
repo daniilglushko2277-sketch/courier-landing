@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Курьер Яндекс Еды — заработок до 240 000 ₽, выплаты каждый день</title>
+    <meta name="description" content="Работа курьером Яндекс Еды: доход до 240 000 ₽ в месяц, ежедневные выплаты, гибкий график. Стань курьером в любом городе России — Москва, Краснодар, СПб и др.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -22,7 +23,6 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        /* герой с градиентом */
         .hero {
             background: linear-gradient(135deg, #FCE000 0%, #FCE000 40%, #FC3F1D 100%);
             padding: 80px 0 70px;
@@ -93,7 +93,6 @@
             background: #FC3F1D;
             color: white;
         }
-        /* сетка преимуществ 2x3 */
         .section-title {
             font-size: 2.2rem;
             font-weight: 800;
@@ -102,7 +101,7 @@
         }
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
@@ -127,7 +126,6 @@
             font-weight: 800;
             margin-bottom: 12px;
         }
-        /* требования */
         .requirements {
             background: #21201F;
             color: white;
@@ -150,7 +148,6 @@
             padding: 24px;
             font-weight: 600;
         }
-        /* калькулятор (автообновление) */
         .calc-block {
             background: #F7F7F7;
             border-radius: 48px;
@@ -189,7 +186,6 @@
             margin: 10px 0;
             font-family: inherit;
         }
-        /* шаги */
         .steps {
             background: linear-gradient(135deg, #FCE000, #FC3F1D);
             border-radius: 48px;
@@ -287,7 +283,7 @@
         <p>Свободный график, ежедневные выплаты и тысячи заказов каждый день. Стань курьером прямо сейчас.</p>
         <a href="#" class="btn">👉 Стать курьером за 2 минуты 👈</a>
         <div class="hero-badges">
-            <div class="hero-badge">💰 от 3 500 ₽ в день</div>
+            <div class="hero-badge">💰 от 4 000 ₽ в день</div>
             <div class="hero-badge">🚀 0 ₽ старт</div>
             <div class="hero-badge">🛡️ 24/7 поддержка</div>
         </div>
@@ -297,7 +293,7 @@
 <div class="container">
     <h2 class="section-title">💎 Почему выбирают Яндекс Еду?</h2>
     <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Высокий заработок</h3><p>От 3 500 ₽ в день. Повышенные тарифы в час пик и бонусы за быстрые доставки.</p></div>
+        <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Высокий заработок</h3><p>От 4 000 ₽ в день. Повышенные тарифы в час пик и бонусы за быстрые доставки.</p></div>
         <div class="benefit-card"><div class="benefit-icon">🕒</div><h3>Свободный график</h3><p>Работайте, когда удобно. Подключайтесь и отключайтесь в один клик.</p></div>
         <div class="benefit-card"><div class="benefit-icon">💸</div><h3>Ежедневные выплаты</h3><p>Деньги на карту каждый день. Без задержек и комиссий.</p></div>
         <div class="benefit-card"><div class="benefit-icon">🎁</div><h3>Бонусы и премии</h3><p>За выполнение квестов, работу в выходные и привлечение друзей до 33 000 ₽.</p></div>
@@ -305,7 +301,6 @@
         <div class="benefit-card"><div class="benefit-icon">🛡️</div><h3>Безопасность</h3><p>Бесплатное страхование на маршруте и поддержка 24/7.</p></div>
     </div>
 
-    <!-- Требования -->
     <div class="requirements">
         <h2 style="font-size: 1.8rem; text-align:center;">📋 Кто может стать курьером?</h2>
         <div class="requirements-grid">
@@ -316,59 +311,58 @@
         </div>
     </div>
 
-    <!-- Калькулятор дохода (автообновление) -->
+    <!-- КАЛЬКУЛЯТОР С ВЫБОРОМ ЧАСОВ И УВЕЛИЧЕННЫМИ СТАВКАМИ -->
     <div class="calc-block">
         <h2 style="font-size: 1.8rem; text-align:center;">📈 Калькулятор твоего дохода</h2>
-        <p style="text-align:center; margin-top: 10px;">Выбери город, часы и транспорт — доход пересчитается автоматически</p>
+        <p style="text-align:center; margin-top: 10px;">Выбери город, часы и транспорт — узнай свой заработок</p>
         <div class="calc-grid">
             <div class="calc-input">
                 <label>🌆 Город</label>
                 <select id="citySelect">
-                    <option value="550">Москва</option>
-                    <option value="470">Санкт-Петербург</option>
-                    <option value="400">Екатеринбург</option>
-                    <option value="380">Новосибирск</option>
-                    <option value="380">Казань</option>
-                    <option value="360">Нижний Новгород</option>
-                    <option value="340">Челябинск</option>
-                    <option value="340">Самара</option>
-                    <option value="350">Ростов-на-Дону</option>
-                    <option value="330">Уфа</option>
-                    <option value="350">Красноярск</option>
-                    <option value="330">Пермь</option>
-                    <option value="320">Воронеж</option>
-                    <option value="310">Волгоград</option>
-                    <option value="300">Краснодар</option>
-                    <option value="310">Саратов</option>
-                    <option value="290">Тюмень</option>
-                    <option value="300">Иркутск</option>
-                    <option value="320">Хабаровск</option>
-                    <option value="300">Владивосток</option>
+                    <option value="750">Москва</option>
+                    <option value="650">Санкт-Петербург</option>
+                    <option value="580">Екатеринбург</option>
+                    <option value="550">Новосибирск</option>
+                    <option value="550">Казань</option>
+                    <option value="530">Нижний Новгород</option>
+                    <option value="510">Челябинск</option>
+                    <option value="510">Самара</option>
+                    <option value="520">Ростов-на-Дону</option>
+                    <option value="500">Уфа</option>
+                    <option value="520">Красноярск</option>
+                    <option value="500">Пермь</option>
+                    <option value="550">Воронеж</option>
+                    <option value="530">Волгоград</option>
+                    <option value="550">Краснодар</option>
+                    <option value="520">Саратов</option>
+                    <option value="500">Тюмень</option>
+                    <option value="510">Иркутск</option>
+                    <option value="530">Хабаровск</option>
+                    <option value="520">Владивосток</option>
                 </select>
                 <label>⏱️ Часов в день</label>
                 <input type="number" id="hours" value="6" step="1" min="2" max="12">
                 <label>🚗 Способ передвижения</label>
                 <select id="vehicle">
-                    <option value="1.2">Автомобиль (+20% к ставке)</option>
-                    <option value="1.0">Велосипед / самокат</option>
-                    <option value="0.9">Пешком</option>
+                    <option value="1.5">Автомобиль (коэффициент +50%)</option>
+                    <option value="1.2">Велосипед / самокат</option>
+                    <option value="1.0">Пешком</option>
                 </select>
             </div>
             <div class="calc-result">
                 <p style="font-weight: 600;">💰 Твой доход:</p>
-                <p><span id="dailyIncome">5 400</span> ₽ в день</p>
-                <p style="font-size: 1.6rem; font-weight:800;" id="monthlyIncome">~ 162 000 ₽ в месяц</p>
-                <p style="font-size: 0.85rem;">*Включая бонус за смены от 6ч + чаевые сверху</p>
+                <p><span id="dailyIncome">4 950</span> ₽ в день</p>
+                <p style="font-size: 1.6rem; font-weight:800;" id="monthlyIncome">~ 123 750 ₽ в месяц</p>
+                <p style="font-size: 0.85rem;">*включая бонус за смены от 6ч + чаевые сверху</p>
             </div>
         </div>
         <div style="text-align:center; margin-top:20px;">
             <div style="background: white; border-radius: 32px; padding: 16px; display:inline-block; text-align:left;">
-                📍 Пример для Краснодара (велосипед, 6 часов): ~ 3600 ₽ в день
+                📍 Пример для Краснодара (авто, 6 часов): ~ 550 × 6 × 1.5 = 4 950 ₽ в день
             </div>
         </div>
     </div>
 
-    <!-- 3 шага -->
     <div class="steps">
         <h2 style="font-size: 1.8rem; text-align:center;">🚀 Старт за 3 простых шага</h2>
         <div class="steps-flex">
@@ -381,26 +375,24 @@
         </div>
     </div>
 
-    <!-- Отзывы с Краснодаром -->
     <div class="testimonials">
         <h2 class="section-title">🗣️ Реальные истории курьеров</h2>
         <div class="testi-grid">
             <div class="testi-card">
                 <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>«Антон, курьер на велосипеде (Краснодар):<br> “Работаю 6 часов в день, стабильно выходит 3500–4000 ₽. Выплаты каждый день — это удобно. Бонусы за быстрые доставки радуют.”»</p>
+                <p>«Антон, курьер на авто (Краснодар):<br> “Работаю 6 часов в день, стабильно выходит 4500–5000 ₽. Выплаты каждый день — супер! Бонусы за быстрые доставки радуют.”»</p>
             </div>
             <div class="testi-card">
                 <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>«Алексей, студент на самокате:<br> “Зарабатываю по 4500-6000 ₽ в день в выходные. Выплаты ежедневно — топ. Учусь и работаю без проблем.”»</p>
+                <p>«Алексей, студент на самокате:<br> “Зарабатываю по 5000-7000 ₽ в день в выходные. Выплаты ежедневно — топ. Учусь и работаю без проблем.”»</p>
             </div>
             <div class="testi-card">
                 <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>«Дмитрий, на авто в Москве:<br> “8-часовые смены, средний чек 7500 ₽. С бонусами выходит более 220 000 в месяц. Свобода!”»</p>
+                <p>«Дмитрий, на авто в Москве:<br> “8-часовые смены, средний чек 9000 ₽. С бонусами выходит более 250 000 в месяц. Свобода!”»</p>
             </div>
         </div>
     </div>
 
-    <!-- FAQ -->
     <div class="faq">
         <h2 class="section-title">❓ Частые вопросы</h2>
         <div class="faq-item"><div class="faq-question">❓ Нужен опыт работы?</div><div>Нет, всему научим. Приложение подскажет маршрут, а поддержка поможет 24/7.</div></div>
@@ -421,7 +413,6 @@
 </footer>
 
 <script>
-    // Автообновление калькулятора при любом изменении полей
     const citySelect = document.getElementById('citySelect');
     const hoursInput = document.getElementById('hours');
     const vehicleSelect = document.getElementById('vehicle');
@@ -434,23 +425,23 @@
         let vehicleMult = parseFloat(vehicleSelect.value);
         if (isNaN(hours) || hours < 2) hours = 2;
         let daily = Math.round(hourlyRate * hours * vehicleMult);
-        if (hours >= 6) daily = Math.round(daily * 1.05); // бонус за долгую смену
+        // бонус за долгую смену (от 6 часов) +5%
+        if (hours >= 6) daily = Math.round(daily * 1.05);
         let monthly = daily * 25;
         dailySpan.innerText = daily.toLocaleString('ru-RU');
         monthlySpan.innerText = `~ ${monthly.toLocaleString('ru-RU')} ₽`;
     }
 
-    [citySelect, hoursInput, vehicleSelect].forEach(el => {
-        el.addEventListener('input', calculateIncome);
-        el.addEventListener('change', calculateIncome);
-    });
+    citySelect.addEventListener('change', calculateIncome);
+    hoursInput.addEventListener('input', calculateIncome);
+    vehicleSelect.addEventListener('change', calculateIncome);
     calculateIncome();
 
-    // обработка кнопок (демо)
+    // демо-обработка кнопок
     document.querySelectorAll('.btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('📝 Заявка отправлена! Менеджер свяжется с вами в ближайшее время.');
+            alert('📝 Заявка отправлена! Менеджер свяжется с вами. (Демо-режим)');
         });
     });
 </script>
