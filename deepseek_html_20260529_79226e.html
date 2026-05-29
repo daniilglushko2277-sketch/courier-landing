@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Курьер Яндекс Еды — заработок до 240 000 ₽, выплаты каждый день</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Yandex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FFFFFF;
+            color: #21201F;
+            line-height: 1.4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* герой с градиентом */
+        .hero {
+            background: linear-gradient(135deg, #FCE000 0%, #FCE000 40%, #FC3F1D 100%);
+            padding: 80px 0 70px;
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero .highlight-number {
+            font-size: 3.2rem;
+            color: #21201F;
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 0 8px;
+            border-radius: 32px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            max-width: 700px;
+            margin: 20px 0 30px;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0 0;
+        }
+        .hero-badge {
+            background: #21201F;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #21201F;
+            color: white;
+            font-weight: 800;
+            padding: 16px 42px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .btn:hover {
+            background-color: #FC3F1D;
+            transform: scale(1.02);
+        }
+        .btn-light {
+            background: #FCE000;
+            color: #21201F;
+        }
+        .btn-light:hover {
+            background: #FC3F1D;
+            color: white;
+        }
+        /* сетка преимуществ 2x3 */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 60px 0 30px;
+            text-align: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .benefit-card {
+            background: #F9F9F9;
+            border-radius: 32px;
+            padding: 28px 24px;
+            transition: 0.2s;
+            border: 1px solid #f0f0f0;
+        }
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            border-color: #FCE000;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.05);
+        }
+        .benefit-icon {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+        }
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        /* требования */
+        .requirements {
+            background: #21201F;
+            color: white;
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin: 60px 0;
+        }
+        .requirements-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .req-item {
+            flex: 1;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 32px;
+            padding: 24px;
+            font-weight: 600;
+        }
+        /* калькулятор (автообновление) */
+        .calc-block {
+            background: #F7F7F7;
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin: 60px 0;
+        }
+        .calc-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+            align-items: center;
+        }
+        .calc-input {
+            flex: 1;
+        }
+        .calc-result {
+            flex: 1;
+            background: white;
+            border-radius: 32px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .calc-result span {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #FC3F1D;
+        }
+        input, select {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1rem;
+            border-radius: 48px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            font-family: inherit;
+        }
+        /* шаги */
+        .steps {
+            background: linear-gradient(135deg, #FCE000, #FC3F1D);
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            color: #21201F;
+        }
+        .steps-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .step-item {
+            flex: 1;
+            text-align: center;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(2px);
+            padding: 24px;
+            border-radius: 32px;
+            font-weight: 600;
+        }
+        .step-num {
+            background: #21201F;
+            color: #FCE000;
+            width: 56px;
+            height: 56px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .testimonials {
+            margin: 70px 0;
+        }
+        .testi-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .testi-card {
+            background: #FCFCFC;
+            border-left: 5px solid #FCE000;
+            padding: 24px;
+            border-radius: 24px;
+            flex: 1;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+        .faq {
+            margin: 60px 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid #E6E6E6;
+            padding: 24px 0;
+        }
+        .faq-question {
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .cta-bottom {
+            background: linear-gradient(115deg, #FCE000 0%, #FC3F1D 100%);
+            text-align: center;
+            padding: 60px 24px;
+            border-radius: 60px;
+            margin: 60px 0;
+            color: #21201F;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.85rem;
+            color: #6c6c6c;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 750px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .highlight-number { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>🔥 Зарабатывай с Яндекс Едой <span class="highlight-number">до 240 000 ₽</span> в месяц</h1>
+        <p>Свободный график, ежедневные выплаты и тысячи заказов каждый день. Стань курьером прямо сейчас.</p>
+        <a href="#" class="btn">👉 Стать курьером за 2 минуты 👈</a>
+        <div class="hero-badges">
+            <div class="hero-badge">💰 от 3 500 ₽ в день</div>
+            <div class="hero-badge">🚀 0 ₽ старт</div>
+            <div class="hero-badge">🛡️ 24/7 поддержка</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">💎 Почему выбирают Яндекс Еду?</h2>
+    <div class="benefits-grid">
+        <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Высокий заработок</h3><p>От 3 500 ₽ в день. Повышенные тарифы в час пик и бонусы за быстрые доставки.</p></div>
+        <div class="benefit-card"><div class="benefit-icon">🕒</div><h3>Свободный график</h3><p>Работайте, когда удобно. Подключайтесь и отключайтесь в один клик.</p></div>
+        <div class="benefit-card"><div class="benefit-icon">💸</div><h3>Ежедневные выплаты</h3><p>Деньги на карту каждый день. Без задержек и комиссий.</p></div>
+        <div class="benefit-card"><div class="benefit-icon">🎁</div><h3>Бонусы и премии</h3><p>За выполнение квестов, работу в выходные и привлечение друзей до 33 000 ₽.</p></div>
+        <div class="benefit-card"><div class="benefit-icon">📱</div><h3>Умное приложение</h3><p>Встроенная навигация, подсказки и автоматическое распределение заказов.</p></div>
+        <div class="benefit-card"><div class="benefit-icon">🛡️</div><h3>Безопасность</h3><p>Бесплатное страхование на маршруте и поддержка 24/7.</p></div>
+    </div>
+
+    <!-- Требования -->
+    <div class="requirements">
+        <h2 style="font-size: 1.8rem; text-align:center;">📋 Кто может стать курьером?</h2>
+        <div class="requirements-grid">
+            <div class="req-item">🆔 Возраст от 18 лет</div>
+            <div class="req-item">📱 Смартфон (Android/iOS)</div>
+            <div class="req-item">🚗 Пешком / вело / самокат / авто</div>
+            <div class="req-item">📄 Паспорт РФ или ВНЖ</div>
+        </div>
+    </div>
+
+    <!-- Калькулятор дохода (автообновление) -->
+    <div class="calc-block">
+        <h2 style="font-size: 1.8rem; text-align:center;">📈 Калькулятор твоего дохода</h2>
+        <p style="text-align:center; margin-top: 10px;">Выбери город, часы и транспорт — доход пересчитается автоматически</p>
+        <div class="calc-grid">
+            <div class="calc-input">
+                <label>🌆 Город</label>
+                <select id="citySelect">
+                    <option value="550">Москва</option>
+                    <option value="470">Санкт-Петербург</option>
+                    <option value="400">Екатеринбург</option>
+                    <option value="380">Новосибирск</option>
+                    <option value="380">Казань</option>
+                    <option value="360">Нижний Новгород</option>
+                    <option value="340">Челябинск</option>
+                    <option value="340">Самара</option>
+                    <option value="350">Ростов-на-Дону</option>
+                    <option value="330">Уфа</option>
+                    <option value="350">Красноярск</option>
+                    <option value="330">Пермь</option>
+                    <option value="320">Воронеж</option>
+                    <option value="310">Волгоград</option>
+                    <option value="300">Краснодар</option>
+                    <option value="310">Саратов</option>
+                    <option value="290">Тюмень</option>
+                    <option value="300">Иркутск</option>
+                    <option value="320">Хабаровск</option>
+                    <option value="300">Владивосток</option>
+                </select>
+                <label>⏱️ Часов в день</label>
+                <input type="number" id="hours" value="6" step="1" min="2" max="12">
+                <label>🚗 Способ передвижения</label>
+                <select id="vehicle">
+                    <option value="1.2">Автомобиль (+20% к ставке)</option>
+                    <option value="1.0">Велосипед / самокат</option>
+                    <option value="0.9">Пешком</option>
+                </select>
+            </div>
+            <div class="calc-result">
+                <p style="font-weight: 600;">💰 Твой доход:</p>
+                <p><span id="dailyIncome">5 400</span> ₽ в день</p>
+                <p style="font-size: 1.6rem; font-weight:800;" id="monthlyIncome">~ 162 000 ₽ в месяц</p>
+                <p style="font-size: 0.85rem;">*Включая бонус за смены от 6ч + чаевые сверху</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:20px;">
+            <div style="background: white; border-radius: 32px; padding: 16px; display:inline-block; text-align:left;">
+                📍 Пример для Краснодара (велосипед, 6 часов): ~ 3600 ₽ в день
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 шага -->
+    <div class="steps">
+        <h2 style="font-size: 1.8rem; text-align:center;">🚀 Старт за 3 простых шага</h2>
+        <div class="steps-flex">
+            <div class="step-item"><div class="step-num">1</div><strong>📝 Заполни анкету</strong><br>2 минуты онлайн</div>
+            <div class="step-item"><div class="step-num">2</div><strong>📞 Дождись звонка</strong><br>Менеджер подберет вариант</div>
+            <div class="step-item"><div class="step-num">3</div><strong>⚡ Выходи на линию</strong><br>Зарабатывай в тот же день</div>
+        </div>
+        <div style="text-align:center; margin-top: 40px;">
+            <a href="#" class="btn btn-light">▶ Начать зарабатывать</a>
+        </div>
+    </div>
+
+    <!-- Отзывы с Краснодаром -->
+    <div class="testimonials">
+        <h2 class="section-title">🗣️ Реальные истории курьеров</h2>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>«Антон, курьер на велосипеде (Краснодар):<br> “Работаю 6 часов в день, стабильно выходит 3500–4000 ₽. Выплаты каждый день — это удобно. Бонусы за быстрые доставки радуют.”»</p>
+            </div>
+            <div class="testi-card">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>«Алексей, студент на самокате:<br> “Зарабатываю по 4500-6000 ₽ в день в выходные. Выплаты ежедневно — топ. Учусь и работаю без проблем.”»</p>
+            </div>
+            <div class="testi-card">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>«Дмитрий, на авто в Москве:<br> “8-часовые смены, средний чек 7500 ₽. С бонусами выходит более 220 000 в месяц. Свобода!”»</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+        <h2 class="section-title">❓ Частые вопросы</h2>
+        <div class="faq-item"><div class="faq-question">❓ Нужен опыт работы?</div><div>Нет, всему научим. Приложение подскажет маршрут, а поддержка поможет 24/7.</div></div>
+        <div class="faq-item"><div class="faq-question">❓ Как получить деньги?</div><div>Выплаты ежедневно на карту любого банка. Никаких задержек.</div></div>
+        <div class="faq-item"><div class="faq-question">❓ Какие документы нужны?</div><div>Паспорт, смартфон и желание работать. Оформление онлайн.</div></div>
+        <div class="faq-item"><div class="faq-question">❓ Можно совмещать с учёбой?</div><div>Да, гибкий график — выбирай любые смены от 2 до 12 часов.</div></div>
+    </div>
+
+    <div class="cta-bottom">
+        <h3 style="font-size: 2rem;">💪 Не жди — действуй!</h3>
+        <p style="font-size: 1.2rem; margin: 20px 0;">Стабильные заказы, ежедневные выплаты и свобода выбора. Стань курьером Яндекс Еды</p>
+        <a href="#" class="btn">✅ ЗАПОЛНИТЬ АНКЕТУ</a>
+    </div>
+</div>
+
+<footer>
+    Официальный партнер сервиса Яндекс Еда · 18+ · Работа по всей России
+</footer>
+
+<script>
+    // Автообновление калькулятора при любом изменении полей
+    const citySelect = document.getElementById('citySelect');
+    const hoursInput = document.getElementById('hours');
+    const vehicleSelect = document.getElementById('vehicle');
+    const dailySpan = document.getElementById('dailyIncome');
+    const monthlySpan = document.getElementById('monthlyIncome');
+
+    function calculateIncome() {
+        let hourlyRate = parseInt(citySelect.value);
+        let hours = parseInt(hoursInput.value);
+        let vehicleMult = parseFloat(vehicleSelect.value);
+        if (isNaN(hours) || hours < 2) hours = 2;
+        let daily = Math.round(hourlyRate * hours * vehicleMult);
+        if (hours >= 6) daily = Math.round(daily * 1.05); // бонус за долгую смену
+        let monthly = daily * 25;
+        dailySpan.innerText = daily.toLocaleString('ru-RU');
+        monthlySpan.innerText = `~ ${monthly.toLocaleString('ru-RU')} ₽`;
+    }
+
+    [citySelect, hoursInput, vehicleSelect].forEach(el => {
+        el.addEventListener('input', calculateIncome);
+        el.addEventListener('change', calculateIncome);
+    });
+    calculateIncome();
+
+    // обработка кнопок (демо)
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('📝 Заявка отправлена! Менеджер свяжется с вами в ближайшее время.');
+        });
+    });
+</script>
+</body>
+</html>
